@@ -14,19 +14,24 @@ public class MarkdownParseTest{
 
     @Test
     public void checkLinks1() throws IOException{
-        assertEquals(List.of("https://something.com", "some-thing.html"), MarkdownParse.getLinks(Files.readString(Path.of("test-file.md"))));
+        Path path = Path.of("C:/Users/Elvis Joa/OneDrive/Documents/GitHub/markdown-parser/test-file.md");
+        List<String> links = MarkdownParse.getLinks(Files.readString(path));
+        assertEquals(List.of("https://something.com", "some-thing.html"), links);
     }
 
     @Test
     public void checkLinks2() throws IOException{
-        assertEquals(List.of(), MarkdownParse.getLinks(Files.readString(Path.of("parenthesis-test.md"))));
+        Path path = Path.of("C:/Users/Elvis Joa/OneDrive/Documents/GitHub/markdown-parser/parenthesis-test.md");
+        assertEquals(List.of(), MarkdownParse.getLinks(Files.readString(path)));
     }
     @Test
     public void checkLinks3() throws IOException{
-        assertEquals(List.of(), MarkdownParse.getLinks(Files.readString(Path.of("brackets-test.md"))));
+        Path path = Path.of("C:/Users/Elvis Joa/OneDrive/Documents/GitHub/markdown-parser/brackets-test.md");
+        assertEquals(List.of(), MarkdownParse.getLinks(Files.readString(path)));
     }
     @Test
     public void checkLinks4() throws IOException{
-        assertEquals(List.of("https://sites.google.com/eng.ucsd.edu/cse-15l-spring-2022/syllabus","canvas.ucsd.edu"), MarkdownParse.getLinks(Files.readString(Path.of("another-test.md"))));
+        Path path = Path.of("C:/Users/Elvis Joa/OneDrive/Documents/GitHub/markdown-parser/brackets-test.md");
+        assertEquals(List.of(), MarkdownParse.getLinks(Files.readString(path)));
     }
 }
