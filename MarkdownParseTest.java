@@ -8,11 +8,6 @@ import java.util.List;
 import org.junit.*;
 public class MarkdownParseTest{
     @Test
-    public void addition() {
-        assertEquals(2, 1 + 1);
-    }
-
-    @Test
     public void checkAllLinks() throws IOException{
         Path file1 = Path.of("test-file.md");
         Path file2 = Path.of("test-file2.md");
