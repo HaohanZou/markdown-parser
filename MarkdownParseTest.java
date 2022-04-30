@@ -34,7 +34,7 @@ public class MarkdownParseTest{
         assertEquals(List.of(), MarkdownParse.getLinks(Files.readString(file5)));
         assertEquals(List.of(), MarkdownParse.getLinks(Files.readString(file6)));
         assertEquals(List.of(), MarkdownParse.getLinks(Files.readString(file7)));
-        assertEquals(List.of("a link of the first line"), MarkdownParse.getLinks(Files.readString(file8)));
+        assertEquals(List.of("a link on the first line"), MarkdownParse.getLinks(Files.readString(file8)));
 
     }
 
