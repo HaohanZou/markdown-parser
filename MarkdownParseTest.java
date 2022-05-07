@@ -29,7 +29,7 @@ public class MarkdownParseTest{
 
         assertEquals(List.of("https://something.com", "some-thing.html"), MarkdownParse.getLinks(Files.readString(file1)));
         assertEquals(List.of("https://something.com", "some-page.html"), MarkdownParse.getLinks(Files.readString(file2)));
-        assertEquals(List.of(), MarkdownParse.getLinks(Files.readString(file3))); 
+        assertEquals(List.of(), MarkdownParse.getLinks(Files.readString(file3)));
         assertEquals(List.of(), MarkdownParse.getLinks(Files.readString(file4)));
         assertEquals(List.of(), MarkdownParse.getLinks(Files.readString(file5)));
         assertEquals(List.of(), MarkdownParse.getLinks(Files.readString(file6)));
